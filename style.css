@@ -1,0 +1,170 @@
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-color: #f79898; 
+}
+
+
+/* General page styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: 'Quicksand', sans-serif; 
+    overflow: hidden; 
+}
+
+/* Controls styling */
+.controls {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1; /* Ensure controls are above particles */
+}
+
+input[type="number"] {
+    width: 60px; /* Slightly wider input */
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #e53935;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c62828;
+}
+
+/* Etch A Sketch container styles */
+.etch-a-sketch {
+    position: relative;
+    width: 500px; /* Reduced size */
+    height: 600px; /* Reduced size */
+    background-color: #e53935; /* Slightly different red */
+    border-radius: 15px;
+    border: 8px solid #c62828;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px; /* Space for the title */
+    z-index: 1; /* Ensure Etch A Sketch is above particles */
+}
+
+/* Title styles */
+.title {
+    position: absolute;
+    top: 20px;
+    font-family: 'Quicksand', sans-serif; /* Font for title */
+    font-weight: 700; /* Bold weight */
+    font-size: 30px; /* Smaller size */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Ensure title is above the screen */
+}
+
+/* Screen container for the grid */
+.screen {
+    position: relative;
+    width: 480px; /* Adjusted width */
+    height: 480px; /* Adjusted height */
+    background-color: #fff;
+    border: 8px solid #999;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+    display: flex; /* Center grid container */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Space below title */
+}
+
+/* Knob styles */
+.knob {
+    position: absolute;
+    width: 50px; /* Smaller size */
+    height: 50px; /* Smaller size */
+    background-color: #eee;
+    border-radius: 50%;
+    border: 3px solid #aaa;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.knob-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.knob-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 1px; /* Reduced gap */
+}
+
+/* Grid item styles */
+.grid-item {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px; /* Smaller font size */
+    color: #000;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.grid-item:hover {
+    background-color: #999;
+    cursor: pointer;
+}
+
+/* GitHub link styling */
+.github-link {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Font for GitHub text */
+    font-weight: 400; /* Normal weight */
+    z-index: 20; /* Ensure it's above other elements */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+.github-logo {
+    width: 40px; /* Slightly larger for visibility */
+    height: 40px; /* Slightly larger for visibility */
+    margin-right: 8px; /* Space between logo and text */
+}
+
+.github-text {
+    font-size: 16px; /* Font size for the text */
+}
